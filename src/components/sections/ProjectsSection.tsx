@@ -4,46 +4,40 @@ import { useRef, useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
+import foodRecognitionImg from '@/assets/project-food-recognition.jpg';
+import fashionPredictorImg from '@/assets/project-fashion-predictor.jpg';
+import maskDetectionImg from '@/assets/project-mask-detection.jpg';
+
 const projects = [
   {
     id: 1,
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'Real-time analytics platform with ML-driven insights and predictive modeling for enterprise clients.',
-    tech: ['React', 'Python', 'TensorFlow', 'D3.js', 'PostgreSQL'],
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
+    title: '101Food Image Recognition',
+    description: 'Deep learning model trained on the Food-101 dataset to classify 101 different food categories with high accuracy. Features real-time image classification and nutritional insights.',
+    tech: ['Python', 'TensorFlow', 'CNN', 'Keras', 'OpenCV'],
+    image: foodRecognitionImg,
     github: '#',
     demo: '#',
     color: 'from-primary/20 to-secondary/20',
   },
   {
     id: 2,
-    title: 'Neural Style Transfer App',
-    description: 'Web application that applies artistic neural style transfer to images using deep learning.',
-    tech: ['Next.js', 'PyTorch', 'FastAPI', 'WebGL', 'AWS'],
-    image: 'https://images.unsplash.com/photo-1547826039-bfc35e0f1ea8?w=800&q=80',
+    title: 'Fashion Style Predictor',
+    description: 'AI-powered fashion classification system that analyzes clothing images and predicts style categories like casual, formal, streetwear, and vintage with outfit recommendations.',
+    tech: ['Python', 'PyTorch', 'ResNet', 'FastAPI', 'React'],
+    image: fashionPredictorImg,
     github: '#',
     demo: '#',
     color: 'from-secondary/20 to-accent/20',
   },
   {
     id: 3,
-    title: '3D Product Configurator',
-    description: 'Interactive 3D product visualization tool with real-time customization and AR preview.',
-    tech: ['Three.js', 'React', 'Node.js', 'MongoDB', 'WebXR'],
-    image: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&q=80',
+    title: 'Face Mask Detection',
+    description: 'Real-time computer vision system for detecting face masks in video streams. Deployed for COVID-19 safety compliance monitoring with high precision and recall.',
+    tech: ['Python', 'OpenCV', 'YOLO', 'TensorFlow', 'Flask'],
+    image: maskDetectionImg,
     github: '#',
     demo: '#',
     color: 'from-accent/20 to-primary/20',
-  },
-  {
-    id: 4,
-    title: 'Conversational AI Platform',
-    description: 'Enterprise chatbot platform with NLP capabilities and multi-language support.',
-    tech: ['TypeScript', 'OpenAI', 'LangChain', 'Redis', 'Docker'],
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80',
-    github: '#',
-    demo: '#',
-    color: 'from-primary/20 to-accent/20',
   },
 ];
 
@@ -140,12 +134,12 @@ export function ProjectsSection() {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects that showcase my expertise in AI, full-stack development, 
-            and immersive web experiences.
+            AI and machine learning projects showcasing my expertise in computer vision, 
+            deep learning, and intelligent systems.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}
