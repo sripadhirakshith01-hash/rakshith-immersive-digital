@@ -16,59 +16,59 @@ import {
 
 const skillCategories = [
   {
-    title: 'AI & Machine Learning',
+    title: 'Deep Learning',
     icon: Brain,
     color: 'text-primary',
     bgColor: 'bg-primary/10',
     skills: [
       { name: 'TensorFlow', icon: Cpu },
-      { name: 'PyTorch', icon: Cpu },
-      { name: 'Scikit-learn', icon: Brain },
-      { name: 'OpenAI/LLMs', icon: Brain },
-      { name: 'Computer Vision', icon: Palette },
-      { name: 'NLP', icon: Globe },
+      { name: 'Keras', icon: Cpu },
+      { name: 'PyTorch', icon: Brain },
+      { name: 'CNN/RNN', icon: Layers },
+      { name: 'Transfer Learning', icon: Brain },
+      { name: 'Neural Networks', icon: Zap },
     ],
   },
   {
-    title: 'Front-end',
-    icon: Code,
+    title: 'Computer Vision',
+    icon: Palette,
     color: 'text-secondary',
     bgColor: 'bg-secondary/10',
     skills: [
-      { name: 'React', icon: Code },
-      { name: 'Next.js', icon: Layers },
-      { name: 'TypeScript', icon: Code },
-      { name: 'Three.js', icon: Palette },
-      { name: 'Tailwind CSS', icon: Palette },
-      { name: 'Framer Motion', icon: Zap },
+      { name: 'OpenCV', icon: Palette },
+      { name: 'Image Classification', icon: Layers },
+      { name: 'Object Detection', icon: Palette },
+      { name: 'YOLO', icon: Zap },
+      { name: 'Image Segmentation', icon: Layers },
+      { name: 'Data Augmentation', icon: Database },
     ],
   },
   {
-    title: 'Back-end',
-    icon: Server,
+    title: 'Programming & DSA',
+    icon: Code,
     color: 'text-accent',
     bgColor: 'bg-accent/10',
     skills: [
-      { name: 'Node.js', icon: Server },
       { name: 'Python', icon: Code },
-      { name: 'FastAPI', icon: Zap },
-      { name: 'GraphQL', icon: Database },
-      { name: 'PostgreSQL', icon: Database },
-      { name: 'MongoDB', icon: Database },
+      { name: 'C++', icon: Code },
+      { name: 'Data Structures', icon: Database },
+      { name: 'Algorithms', icon: Zap },
+      { name: 'Problem Solving', icon: Brain },
+      { name: 'Competitive Coding', icon: Code },
     ],
   },
   {
-    title: 'Tools & Platforms',
-    icon: Smartphone,
+    title: 'Tools & Libraries',
+    icon: Server,
     color: 'text-primary',
     bgColor: 'bg-primary/10',
     skills: [
-      { name: 'Docker', icon: Layers },
-      { name: 'AWS', icon: Globe },
+      { name: 'NumPy', icon: Database },
+      { name: 'Pandas', icon: Database },
+      { name: 'Matplotlib', icon: Palette },
+      { name: 'Scikit-learn', icon: Brain },
       { name: 'Git', icon: Code },
-      { name: 'Vercel', icon: Globe },
-      { name: 'Figma', icon: Palette },
-      { name: 'Linux', icon: Server },
+      { name: 'Jupyter', icon: Layers },
     ],
   },
 ];
@@ -139,7 +139,7 @@ export function SkillsSection() {
             Technical <span className="gradient-text">Skills</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive toolkit spanning AI/ML, modern web development, and cloud infrastructure.
+            Focused expertise in AI, Machine Learning, and algorithmic problem-solving.
           </p>
         </motion.div>
 

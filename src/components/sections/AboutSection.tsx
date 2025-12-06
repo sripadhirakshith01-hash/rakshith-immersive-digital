@@ -6,11 +6,11 @@ import { Button } from '@/components/ui/button';
 
 const skills = [
   { name: 'Python', level: 95 },
-  { name: 'TensorFlow/PyTorch', level: 90 },
-  { name: 'React/Next.js', level: 92 },
-  { name: 'TypeScript', level: 88 },
-  { name: 'Node.js', level: 85 },
-  { name: 'Three.js/WebGL', level: 80 },
+  { name: 'Deep Learning', level: 90 },
+  { name: 'TensorFlow/Keras', level: 88 },
+  { name: 'PyTorch', level: 85 },
+  { name: 'Data Structures & Algorithms', level: 92 },
+  { name: 'Computer Vision', level: 85 },
 ];
 
 function SkillBar({ name, level, index }: { name: string; level: number; index: number }) {
@@ -63,16 +63,16 @@ export function AboutSection() {
             </div>
             
             <p className="text-muted-foreground text-lg leading-relaxed">
-              I'm a passionate developer with expertise in AI/ML and full-stack development. 
-              I specialize in building intelligent systems that combine cutting-edge machine learning 
-              with stunning visual interfaces.
+              I'm a 3rd year Computer Science Engineering student at the Indian Institute of 
+              Information Technology, Surat (IIIT Surat), passionate about Artificial Intelligence 
+              and Machine Learning.
             </p>
             
             <p className="text-muted-foreground leading-relaxed">
-              With over 5 years of experience, I've worked with startups and enterprises alike, 
-              delivering scalable solutions that push the boundaries of what's possible on the web. 
-              My work blends technical excellence with creative design, resulting in experiences 
-              that are both powerful and beautiful.
+              I specialize in Deep Learning, Computer Vision, and solving complex problems using 
+              Data Structures & Algorithms. My projects focus on building intelligent systems that 
+              can recognize patterns, classify images, and make predictions from real-world data. 
+              I'm constantly learning and exploring new frontiers in AI research.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">
