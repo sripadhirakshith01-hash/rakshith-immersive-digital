@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 import foodRecognitionImg from '@/assets/project-food-recognition.jpg';
 import fashionPredictorImg from '@/assets/project-fashion-predictor.jpg';
@@ -16,7 +17,8 @@ const projects = [
     tech: ['Python', 'TensorFlow', 'CNN', 'Keras', 'OpenCV'],
     image: foodRecognitionImg,
     github: '#',
-    demo: '#',
+    demo: '/projects/food-recognition',
+    isInternalDemo: true,
     color: 'from-primary/20 to-secondary/20',
   },
   {
@@ -27,6 +29,7 @@ const projects = [
     image: fashionPredictorImg,
     github: '#',
     demo: '#',
+    isInternalDemo: false,
     color: 'from-secondary/20 to-accent/20',
   },
   {
@@ -37,6 +40,7 @@ const projects = [
     image: maskDetectionImg,
     github: '#',
     demo: '#',
+    isInternalDemo: false,
     color: 'from-accent/20 to-primary/20',
   },
 ];
@@ -73,12 +77,21 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
             animate={{ opacity: isHovered ? 1 : 0 }}
             className="absolute inset-0 bg-background/80 backdrop-blur-sm z-20 flex items-center justify-center gap-4"
           >
-            <Button variant="hero" size="sm" asChild>
-              <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Live Demo
-              </a>
-            </Button>
+            {project.isInternalDemo ? (
+              <Button variant="hero" size="sm" asChild>
+                <Link to={project.demo}>
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Live Demo
+                </Link>
+              </Button>
+            ) : (
+              <Button variant="hero" size="sm" asChild>
+                <a href={project.demo} target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Live Demo
+                </a>
+              </Button>
+            )}
             <Button variant="glass" size="sm" asChild>
               <a href={project.github} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" />
