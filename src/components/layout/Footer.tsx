@@ -1,10 +1,9 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Twitter, Heart } from 'lucide-react';
+import { Github, Linkedin, Heart } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Github, href: '#', label: 'GitHub' },
-  { icon: Linkedin, href: '#', label: 'LinkedIn' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
+  { icon: Github, href: 'https://github.com/sripadhirakshith01-hash', label: 'GitHub' },
+  { icon: Linkedin, href: 'https://www.linkedin.com/in/rakshithsripadhi', label: 'LinkedIn' },
 ];
 
 export function Footer() {

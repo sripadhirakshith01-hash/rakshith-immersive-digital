@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Send, Mail, MapPin, Github, Linkedin, Twitter } from 'lucide-react';
+import { Send, Mail, MapPin, Github, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
 
@@ -28,10 +28,9 @@ export function ContactSection() {
   };
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Mail, href: 'mailto:hello@rakshith.dev', label: 'Email' },
+    { icon: Github, href: 'https://github.com/sripadhirakshith01-hash', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/rakshithsripadhi', label: 'LinkedIn' },
+    { icon: Mail, href: 'mailto:Sripadhi.Rakshith01@gmail.com', label: 'Email' },
   ];
 
   return (
@@ -154,8 +153,8 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
-                    <a href="mailto:hello@rakshith.dev" className="text-foreground hover:text-primary transition-colors">
-                      hello@rakshith.dev
+                    <a href="mailto:Sripadhi.Rakshith01@gmail.com" className="text-foreground hover:text-primary transition-colors">
+                      Sripadhi.Rakshith01@gmail.com
                     </a>
                   </div>
                 </div>
@@ -166,7 +165,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Location</p>
-                    <p className="text-foreground">San Francisco, CA</p>
+                    <p className="text-foreground">Hyderabad, India</p>
                   </div>
                 </div>
               </div>
