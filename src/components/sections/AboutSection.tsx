@@ -79,9 +79,11 @@ export function AboutSection() {
               <Button variant="hero" asChild>
                 <a href="#contact">Let's Connect</a>
               </Button>
-              <Button variant="glass" className="gap-2">
-                <Download className="w-4 h-4" />
-                Download Resume
+              <Button variant="glass" className="gap-2" asChild>
+                <a href="/Rakshith_Sripadhi_Resume.docx" download>
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </a>
               </Button>
             </div>
           </motion.div>
