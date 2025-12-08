@@ -1,13 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
-import { ArrowLeft, Download, Database, Cpu, Layers, Zap, CheckCircle, BookOpen } from 'lucide-react';
+import { ArrowLeft, Download, Database, Cpu, Layers, Zap, CheckCircle, BookOpen, Github } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { NeuralNetworkScene } from '@/components/3d/NeuralNetworkScene';
 import { CNNVisualization } from '@/components/sections/CNNVisualization';
 import { TrainingGraphs } from '@/components/sections/TrainingGraphs';
-
+import { LiveNNVisualization } from '@/components/sections/LiveNNVisualization';
 const buildSteps = [
   {
     icon: Database,
@@ -142,6 +142,12 @@ export default function Food101Project() {
                     Explore Architecture
                   </a>
                 </Button>
+                <Button variant="glass" size="lg" asChild>
+                  <a href="https://github.com/sripadhirakshith01-hash/Deep_Learning_with_Tensorflow/tree/main/Projects/101_Food_Classification" target="_blank" rel="noopener noreferrer">
+                    <Github className="w-5 h-5 mr-2" />
+                    View on GitHub
+                  </a>
+                </Button>
               </motion.div>
             </motion.div>
 
@@ -224,6 +230,9 @@ export default function Food101Project() {
 
         {/* Training Graphs Section */}
         <TrainingGraphs />
+
+        {/* Live Neural Network Visualization */}
+        <LiveNNVisualization />
 
         {/* CNN Visualization Section */}
         <CNNVisualization />
