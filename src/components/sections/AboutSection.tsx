@@ -3,37 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
-const skills = [
-  { name: 'Python', level: 95 },
-  { name: 'Deep Learning', level: 90 },
-  { name: 'TensorFlow/Keras', level: 88 },
-  { name: 'PyTorch', level: 85 },
-  { name: 'Data Structures & Algorithms', level: 92 },
-  { name: 'Computer Vision', level: 85 },
-];
-
-function SkillBar({ name, level, index }: { name: string; level: number; index: number }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px" });
-
-  return (
-    <div ref={ref} className="space-y-2">
-      <div className="flex justify-between text-sm">
-        <span className="text-foreground font-medium">{name}</span>
-        <span className="text-primary">{level}%</span>
-      </div>
-      <div className="h-2 bg-muted rounded-full overflow-hidden">
-        <motion.div
-          initial={{ width: 0 }}
-          animate={isInView ? { width: `${level}%` } : { width: 0 }}
-          transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
-          className="h-full bg-gradient-to-r from-primary to-secondary rounded-full"
-        />
-      </div>
-    </div>
-  );
-}
+import profilePic from '@/assets/profile-pic.jpeg';
 
 export function AboutSection() {
   const ref = useRef(null);
@@ -88,18 +58,45 @@ export function AboutSection() {
             </div>
           </motion.div>
 
-          {/* Right - Skills */}
+          {/* Right - Profile Picture */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="glass-strong p-8 rounded-2xl space-y-6"
+            className="flex justify-center lg:justify-end"
           >
-            <h3 className="text-xl font-semibold">Core Skills</h3>
-            <div className="space-y-5">
-              {skills.map((skill, index) => (
-                <SkillBar key={skill.name} {...skill} index={index} />
-              ))}
+            <div className="relative">
+              {/* Glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-2xl blur-2xl scale-110" />
+              
+              {/* Image container */}
+              <motion.div
+                whileHover={{ scale: 1.02, rotateY: 5 }}
+                transition={{ duration: 0.3 }}
+                className="relative glass-strong p-2 rounded-2xl overflow-hidden"
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <img 
+                  src={profilePic} 
+                  alt="Rakshith Sripadhi" 
+                  className="w-80 h-96 object-cover rounded-xl"
+                />
+                
+                {/* Overlay gradient */}
+                <div className="absolute inset-2 rounded-xl bg-gradient-to-t from-background/60 via-transparent to-transparent pointer-events-none" />
+              </motion.div>
+              
+              {/* Decorative elements */}
+              <motion.div 
+                animate={{ rotate: 360 }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                className="absolute -top-4 -right-4 w-24 h-24 border border-primary/20 rounded-full"
+              />
+              <motion.div 
+                animate={{ rotate: -360 }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                className="absolute -bottom-4 -left-4 w-16 h-16 border border-secondary/20 rounded-full"
+              />
             </div>
           </motion.div>
         </div>

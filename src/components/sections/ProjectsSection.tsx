@@ -16,7 +16,7 @@ const projects = [
     description: 'Deep learning model trained on the Food-101 dataset to classify 101 different food categories with high accuracy. Features real-time image classification and nutritional insights.',
     tech: ['Python', 'TensorFlow', 'CNN', 'Keras', 'OpenCV'],
     image: foodRecognitionImg,
-    github: '#',
+    github: 'https://github.com/sripadhirakshith01-hash/Deep_Learning_with_Tensorflow/tree/main/Projects/101_Food_Classification',
     demo: '/projects/food-recognition',
     isInternalDemo: true,
     color: 'from-primary/20 to-secondary/20',
