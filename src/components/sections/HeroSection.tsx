@@ -53,7 +53,7 @@ export function HeroSection() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            AI, Machine Learning, Full-Stack Development, and 3D-Enhanced Interfaces.
+            Deep Learning, Computer Vision, NLP, AI & Machine Learning.
           </motion.p>
 
           {/* CTA Buttons */}
