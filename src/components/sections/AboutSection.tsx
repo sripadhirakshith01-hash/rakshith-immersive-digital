@@ -7,7 +7,7 @@ import profilePic from '@/assets/profile-pic.jpeg';
 
 export function AboutSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px", amount: 0.2 });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="about" className="section-padding relative">
@@ -19,9 +19,9 @@ export function AboutSection() {
           {/* Left - Bio */}
           <motion.div
             ref={ref}
-            initial={{ opacity: 0, x: -60 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -60 }}
-            transition={{ duration: 0.9, ease: [0.25, 0.4, 0.25, 1] }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8 }}
             className="space-y-6"
           >
             <div className="space-y-2">
@@ -60,9 +60,9 @@ export function AboutSection() {
 
           {/* Right - Profile Picture */}
           <motion.div
-            initial={{ opacity: 0, x: 60 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 60 }}
-            transition={{ duration: 0.9, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center lg:justify-end"
           >
             <div className="relative">

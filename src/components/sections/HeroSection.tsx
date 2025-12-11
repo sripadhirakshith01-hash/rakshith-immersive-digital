@@ -12,7 +12,6 @@ export function HeroSection() {
       {/* 3D Scene */}
       <HeroScene />
       
-      
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <motion.div
@@ -26,7 +25,7 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.2, duration: 0.5 }}
-            className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full backdrop-blur-md"
+            className="inline-flex items-center gap-2 glass px-4 py-2 rounded-full"
           >
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm text-muted-foreground">Available for freelance projects</span>
@@ -37,45 +36,31 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="text-4xl md:text-6xl lg:text-8xl font-black leading-tight max-w-5xl mx-auto tracking-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight max-w-5xl mx-auto"
           >
             Hi, I'm{' '}
             <span className="gradient-text glow-text">Rakshith</span>
             <br />
-            <motion.span 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5 }}
-              className="text-muted-foreground text-3xl md:text-5xl lg:text-6xl font-medium"
-            >
-              I build intelligent, visually
-            </motion.span>
+            <span className="text-muted-foreground">I build intelligent, visually</span>
             <br />
-            <motion.span 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.6 }}
-              className="text-muted-foreground text-3xl md:text-5xl lg:text-6xl font-medium"
-            >
-              immersive digital experiences.
-            </motion.span>
+            <span className="text-muted-foreground">immersive digital experiences.</span>
           </motion.h1>
 
           {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.8 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
             className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"
           >
-            Deep Learning, Computer Vision, NLP, AI & Machine Learning.
+            AI, Machine Learning, Full-Stack Development, and 3D-Enhanced Interfaces.
           </motion.p>
 
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.9, duration: 0.8 }}
+            transition={{ delay: 0.7, duration: 0.8 }}
             className="flex flex-col sm:flex-row gap-4 justify-center pt-6"
           >
             <Button variant="hero" size="xl" asChild>

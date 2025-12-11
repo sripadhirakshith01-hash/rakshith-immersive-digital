@@ -47,15 +47,15 @@ const projects = [
 
 function ProjectCard({ project, index }: { project: typeof projects[0]; index: number }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-50px", amount: 0.2 });
+  const isInView = useInView(ref, { once: true, margin: "-50px" });
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 60 }}
-      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
-      transition={{ duration: 0.7, delay: index * 0.15, ease: [0.25, 0.4, 0.25, 1] }}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
+      transition={{ duration: 0.6, delay: index * 0.15 }}
       className="group relative"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -127,7 +127,7 @@ function ProjectCard({ project, index }: { project: typeof projects[0]; index: n
 
 export function ProjectsSection() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px", amount: 0.1 });
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
     <section id="projects" className="section-padding relative">
@@ -137,9 +137,9 @@ export function ProjectsSection() {
       <div className="container mx-auto relative">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-16 space-y-4"
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">Portfolio</span>
