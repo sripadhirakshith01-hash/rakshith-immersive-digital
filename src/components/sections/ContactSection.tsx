@@ -45,9 +45,9 @@ export function ContactSection() {
       <div className="container mx-auto relative">
         <motion.div
           ref={ref}
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 40 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
+          transition={{ duration: 0.8, ease: [0.25, 0.4, 0.25, 1] }}
           className="text-center mb-16 space-y-4"
         >
           <span className="text-primary text-sm font-medium uppercase tracking-wider">Contact</span>
@@ -62,9 +62,9 @@ export function ContactSection() {
         <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Form */}
           <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -40 }}
-            transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+            initial={{ opacity: 0, x: -50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.4, 0.25, 1] }}
           >
             <form onSubmit={handleSubmit} className="glass-strong rounded-2xl p-8 space-y-6 transition-all duration-500 hover:shadow-[0_0_60px_hsl(var(--primary)/0.2)]">
               <div className="space-y-2">
@@ -140,9 +140,9 @@ export function ContactSection() {
 
           {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 40 }}
-            transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0, x: 50 }}
+            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.4, 0.25, 1] }}
             className="space-y-8"
           >
             <div className="glass-strong rounded-2xl p-8 space-y-6 transition-all duration-500 hover:shadow-[0_0_60px_hsl(var(--primary)/0.2)]">

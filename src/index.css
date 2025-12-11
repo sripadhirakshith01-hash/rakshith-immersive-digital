@@ -70,6 +70,11 @@
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Space Grotesk', sans-serif;
   }
+
+  /* Smooth section transitions */
+  section {
+    @apply transition-all duration-700 ease-out;
+  }
 }
 
 @layer components {
